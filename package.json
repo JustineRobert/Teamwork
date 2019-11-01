@@ -1,0 +1,31 @@
+{
+  "name": "teamwork",
+  "version": "1.0.0",
+  "description": "Teamwork is an ​internal social network App for employees of an organization to facilitate their interaction between colleagues and promote team bonding.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustineRobert/Teamwork.git"
+  },
+  "author": "Justine Robert Igune",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JustineRobert/Teamwork/issues"
+  },
+  "homepage": "https://github.com/JustineRobert/Teamwork#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "pg": "^7.12.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
