@@ -9,7 +9,7 @@ const db = require('./config/database');
 
 // Test DB
 db.authenticate()
-  .then(() => console.log('Database Connected Successfully'))
+  .then(() => console.log('Database is Connected Successfully'))
   .catch(err => console.log('Error:' + err))
 
 const app = express();
@@ -28,11 +28,4 @@ app.use('/teams', require('./routes/teams'));
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, console.log(`server started on port ${PORT}`));
-
-
-
-
-
-
-
+app.listen(PORT, console.log(`Server is successfully running on port ${PORT}`));
