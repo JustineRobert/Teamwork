@@ -11,11 +11,18 @@ app.get('/api', (req, res) => {
 });
 
 app.post('/api/posts', verifyToken, (req, res) =>{
-  res.json({
-    message: 'Post Created Successfully'
+  jwt.verify(req.token, 'secretkey', (err, authData) =>{
+    if(err) {
+      res.sendStatus(403);
+    }else{
+      res.json({
+      message: 'Post Created Successfully',
+      authData
   });
+  }
 });
-/*
+});
+
 app.post('/api/login', (req, res) => {
   //Mock user
   const user{
@@ -29,12 +36,12 @@ app.post('/api/login', (req, res) => {
     address: 'Kampala, Uganda'
   } 
 
-  jwt.sign({user}, 'secretkey', (err, token) =>{
+  jwt.sign({user}, 'secretkey', {expiresIn: '50s'}, (err, token) =>{
     res.json({
       token
     });
   });
-}); */
+}); 
 
 //TOKEN FORMAT
 //Authorization: Bearer <access_token>
@@ -46,7 +53,14 @@ function verifyToken(req, res, next) {
   const bearerHeader = req.headers['authorization'];
   //Check if bearer is undefined
   if(typeof bearerHeader !== 'undefined') {
-
+    //Split at the space
+    const bearer = bearerHeader.split(' ');
+    //Get token from Array
+    const bearerToken = bearer[1];
+    //Set the token 
+    res.token = bearerToken;
+    //Call next middleware
+    next();
   }else {
     //Forbidden
     res.sendStatus(403);
@@ -54,4 +68,4 @@ function verifyToken(req, res, next) {
 }
 
 
-app.listen(5000, ()=>console.log('Server is running on port 5000'));
+app.listen(5000, ()=>console.log('Server is successfully running on port 5000'));
