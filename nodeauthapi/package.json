@@ -1,0 +1,11 @@
+{
+  "name": "nodeauthapi",
+  "version": "1.0.0",
+  "description": " Implement token-based authentication using JSON Web Token (JWT) and secure all  routes requiring authentication, using JSON Web Token (JWT).",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
