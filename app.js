@@ -21,10 +21,10 @@ app.set('view engine', 'handlebars');
 // Set a static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => res.send('TEAMWORK'));
+app.get('/', (req, res) => res.send('TEAMWORK APPLICATION!'));
 
-//Team routes
-app.use('/teams', require('./routes/teams'));
+//User routes
+app.use('/users', require('./routes/users'));
 
 const PORT = process.env.PORT || 5000;
 

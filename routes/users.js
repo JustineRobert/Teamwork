@@ -1,20 +1,20 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../config/database');
-const Team = require('../models/Team');
+const User = require('../models/User');
 
-//Get team list
+//Get user list
 router.get('/', (req, res) => 
   Team.findAll()
   .then(teams => {
-    /*console.log(teams); */
-    res.render('teams', {
-      teams
+    /*console.log(users); */
+    res.render('users', {
+      users
     });
   })
   .catch(err => console.log('err')));
 
-//Add a team
+//Add a user
 router.get('/add', (req, res) =>{
   const data = {
     firstName: 'Justine',
@@ -30,7 +30,7 @@ router.get('/add', (req, res) =>{
 
   let {firstName, lastName, email, password, gender, jobRole, department, address} = data;
   //Insert into table
-  Team.create({
+  User.create({
     firstName,
     lastName,
     email,
@@ -40,7 +40,7 @@ router.get('/add', (req, res) =>{
     department,
     address
   })
-   .then(team => res.redirect('/teams'))
+   .then(user => res.redirect('/users'))
    .catch(err => console.log(err));
 });
 
