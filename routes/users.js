@@ -5,15 +5,19 @@ const User = require('../models/User');
 
 //Get user list
 router.get('/', (req, res) => 
-  Team.findAll()
-  .then(teams => {
-    /*console.log(users); */
+  User.findAll()
+  .then(users => {
+    console.log(users);
+    
+    res.sendStatus(200);
+    /*
     res.render('users', {
       users
-    });
+    }); */
   })
   .catch(err => console.log('err')));
 
+  /*
 //Add a user
 router.get('/add', (req, res) =>{
   const data = {
@@ -42,6 +46,6 @@ router.get('/add', (req, res) =>{
   })
    .then(user => res.redirect('/users'))
    .catch(err => console.log(err));
-});
+});  */
 
 module.exports = router;
