@@ -17,7 +17,7 @@ router.get('/', (req, res) =>
   })
   .catch(err => console.log('err')));
 
-  /*
+
 //Add a user
 router.get('/add', (req, res) =>{
   const data = {
@@ -46,6 +46,6 @@ router.get('/add', (req, res) =>{
   })
    .then(user => res.redirect('/users'))
    .catch(err => console.log(err));
-});  */
+}); 
 
 module.exports = router;
