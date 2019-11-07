@@ -24,15 +24,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => res.send('TEAMWORK'));
 
 //Team routes
-app.use('/teams', require('./routes/teams'));
+app.use('/users', require('./routes/users'));
 
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, console.log(`server started on port ${PORT}`));
-
-
-
-
-
-
-
