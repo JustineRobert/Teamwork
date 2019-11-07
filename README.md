@@ -11,3 +11,9 @@ npm install
 npm start
 # Dev Server (Nodemon)
 npm run dev
+
+
+
+App Info
+Author 
+Justine Robert Igune https://github.com/JustineRobert/
