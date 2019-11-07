@@ -15,7 +15,12 @@ npm run dev
 
 
 App Info
-
-Author 
-
+Author
 Justine Robert Igune https://github.com/JustineRobert/
+Version
+1.0.0
+
+License
+This project is licensed under the MIT License
+
+
