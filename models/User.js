@@ -1,33 +1,32 @@
-const sequelize = require('sequelize');
+const sequelize= require('sequelize');
 const db = require('../config/database');
 
-const Team = db.define('team', {
-  firstName: {
-    type: sequelize.STRING
-  },
 
-  lastName: {
+const User = db.define( 'user', {
+  firstName:{
     type: sequelize.STRING
   },
-  email: {
+  lastName:{
     type: sequelize.STRING
   },
-  password: {
+  email:{
     type: sequelize.STRING
   },
-  gender: {
+  password:{
     type: sequelize.STRING
   },
-  jobRole: {
+  gender:{
     type: sequelize.STRING
   },
-  department: {
+  jobRole:{
     type: sequelize.STRING
   },
-  address: {
+  department:{
+    type: sequelize.STRING
+  },
+  address:{
     type: sequelize.STRING
   }
-
 })
 
-module.exports = Team;
+module.exports = User;
