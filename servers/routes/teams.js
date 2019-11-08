@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../config/database');
-const Team = require('../models/Team');
+const db = require('../../config/database');
+const Team = require('../../models/Team');
 
 //Get team list
 router.get('/', (req, res) => 

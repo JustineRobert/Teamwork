@@ -23,8 +23,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => res.send('TEAMWORK'));
 
-//Team routes
-app.use('/users', require('./routes/users'));
+//User routes
+app.use('/users', require('./servers/routes/users'));;
 
 const PORT = process.env.PORT || 5000;
 
