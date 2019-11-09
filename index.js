@@ -1,10 +1,10 @@
-import express from 'express';
-import cors from 'cors';
-import morgan from 'morgan';
-import dotenv from 'dotenv';
-import swagger from 'swagger-ui-express';
-import routers from './server/routers';
-import swaggerJson from './swagger';
+const express = require('express')
+const cors = require('cors')
+const morgan = require('morgan')
+const dotenv = require('dotenv')
+const swagger = require('swagger-ui-express')
+const routers = require('./server/routers')
+const swaggerJson = require('./swagger')
 
 dotenv.config();
 const app = express();
@@ -29,4 +29,5 @@ app.listen(PORT, () => {
   console.log(`Server started successfully on port ${PORT}`);
 });
 
-export default app;
+module.exports = router;
+/*export default app;*/
