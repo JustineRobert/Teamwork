@@ -191,7 +191,7 @@ describe('Articles endpoint tests', () => {
       .end((request, response) => {
         response.body.should.have.property('status')
           .equal(404);
-        response.body.should.have.property('message').equal('Article no found !');
+        response.body.should.have.property('message').equal('Article not found !');
       });
     done();
   });
