@@ -2,7 +2,7 @@
   "name": "teamwork",
   "version": "1.0.0",
   "description": "Teamwork is an ​internal social network App for employees of an organization to facilitate their interaction between colleagues and promote team bonding.",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
