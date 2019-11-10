@@ -18,30 +18,13 @@
   },
   "homepage": "https://github.com/JustineRobert/Teamwork#readme",
   "dependencies": {
-    "@babel/core": "^7.7.2",
-    "ajv": "^5.5.2",
-    "babel-eslint": "^7.2.3",
-    "babelrc": "0.0.5",
     "body-parser": "^1.19.0",
-    "codeclimate": "0.0.32",
-    "cors": "^2.8.5",
-    "coveralls": "^3.0.7",
-    "dotenv": "^8.2.0",
-    "eslint": "^4.19.1",
-    "eslint-plugin-flowtype": "^2.50.3",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.16.0",
-    "eslintrc": "^1.0.6",
+    "coverage": "^0.4.1",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
-    "morgan": "^1.9.1",
     "pg": "^7.12.1",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^5.21.2",
-    "swagger": "^0.7.5",
-    "swagger-ui-express": "^4.1.2",
-    "travis": "^0.1.1"
+    "sequelize": "^5.21.2"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
