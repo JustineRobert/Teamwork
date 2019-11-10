@@ -1,3 +1,5 @@
+#JustineRobert/Teamwork:.travis.yml@ec6de75
+
 env:
   global:
     - xeXTDXSQmBXLR5KNbi1DGw
@@ -23,3 +25,40 @@ script:
 after_script:
   - npm run coverage
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
+
+# Build Config
+
+{
+  "env": {
+    "global": [
+      "xeXTDXSQmBXLR5KNbi1DGw"
+    ]
+  },
+  "dist": "trusty",
+  "addons": {
+    "chrome": "stable"
+  },
+  "script": [
+    "npm test"
+  ],
+  "node_js": [
+    10
+  ],
+  "language": "node_js",
+  "services": [
+    "postgresql"
+  ],
+  "after_script": [
+    "npm run coverage",
+    "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
+  ],
+  "before_script": [
+    "npm install coverage",
+    "npm install -g nyc",
+    "curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter",
+    "chmod +x ./cc-test-reporter",
+    "./cc-test-reporter before-build",
+    "psql -c 'create database teamwork_db_test;' -U postgres"
+  ]
+}
