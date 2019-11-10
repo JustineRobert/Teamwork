@@ -1,0 +1,68 @@
+header {
+  border-bottom: 0 solid #ebebeb;
+  box-shadow: 0 0 0 #ebebeb;
+}
+
+.banner {
+  background-image: url("../assets/images/home_banner_bg.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-origin: padding-box;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+  height: 25rem;
+}
+
+main section:first-child h1 {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+  font-weight: 800;
+}
+
+main section h2 {
+  margin-left: auto;
+  margin-right: auto;
+  /*color: rgba(255, 221, 153, 1);*/
+  color: #FFFFFF;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+  font-weight: 800;
+  font-size: 1.6vmax;
+  /*background-color: rgba(0,0,0, .1);*/
+}
+
+main section:first-child .button {
+  background-color: #FFFFFF !important;
+  color: #231557;
+}
+
+main section.services > div {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 3.4rem 1.8rem;
+  text-wrap: initial;
+  border-radius: 50%;
+  color: #FFFFFF;
+  background-color: rgba(95, 54, 119, 1);
+}
+main section.services > div:first-child {
+  background-color: #344955;
+}
+
+main section.services > div:nth-child(2) {
+  background-color: #232F34;
+}
+
+main section.services > div:last-child {
+  background-color: #4A6572;
+}
+
+main section.services > div > i {
+  font-size: 2.5vmax;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+main section.services > div > b {
+  font-weight: 600;
+  font-size: .9vmax;
+}
