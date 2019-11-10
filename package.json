@@ -2,10 +2,10 @@
   "name": "teamwork",
   "version": "1.0.0",
   "description": "Teamwork is an ​internal social network App for employees of an organization to facilitate their interaction between colleagues and promote team bonding.",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,11 @@
   "homepage": "https://github.com/JustineRobert/Teamwork#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+<<<<<<< HEAD
     "coverage": "^0.4.1",
+=======
+    "cors": "^2.8.5",
+>>>>>>> develop
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "pg": "^7.12.1",
