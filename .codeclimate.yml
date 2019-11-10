@@ -1,0 +1,6 @@
+plugins:
+  duplication:
+    enabled: false
+    checks:
+      Similar code:
+        enabled: false

@@ -1,0 +1,217 @@
+header .user-menus a {
+  margin-right: .2rem;
+  font-weight: 600;
+}
+
+header .user-menus a:last-child {
+  margin-right: 0;
+}
+
+.share-article .field input,
+.edit-article .field input {
+  width: 99%;
+  background-color: rgba(0, 0, 0, .05) !important;
+}
+
+.share-article form textarea,
+.edit-article form textarea {
+  width: 99%;
+  padding: 0.5em 0 0.5em 0.5em;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 0.15rem;
+  font-family: 'Nunito', sans-serif;
+  background-color: rgba(0, 0, 0, .05) !important;
+  text-align: justify-all;
+}
+
+.share-article .field input:focus,
+.edit-article .field input:focus,
+.share-article .field textarea:focus,
+.edit-article form textarea:focus {
+  background-color: rgba(255, 255, 255, 1) !important;
+  font-weight: 500;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+.share-article .field textarea:focus,
+.edit-article form textarea:focus {
+  border-color: #453376;
+  box-shadow: 0 1px 16px #ced4da;
+}
+
+.share-article .page-title,
+.available-articles .page-title {
+  /*text-shadow: 0 0 10px rgba(0, 0, 0, .2);*/
+  font-size: 1.8vmax;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 1.5rem 0;
+}
+
+.edit-article form .field img {
+  margin: 1rem 0;
+  max-width: 12vmax;
+  max-height: 12vmax;
+  border-radius: .3em;
+}
+
+.available-articles article,
+.my-articles article {
+  border-radius: .3em;
+  width: 20%;
+  padding: 0 0;
+  cursor: pointer;
+  margin-bottom: 1em;
+  margin-right: .2em;
+}
+
+.available-articles article img,
+.my-articles article img {
+  max-width: 100%;
+  border-radius: .2em;
+}
+
+.available-articles article p,
+.my-articles article p {
+  text-align: left;
+  font-family: 'Nunito', sans-serif;
+  margin-top: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.available-articles article .body,
+.my-articles article .body {
+  padding: .5rem;
+  margin-bottom: 0;
+}
+
+.available-articles article .footer,
+.my-articles article .footer {
+  border-top: 1px solid rgba(0, 0, 0, .05);
+  padding: 0 .3em;
+  height: 40px;
+}
+
+.available-articles article .footer .article-info,
+.my-articles article .footer .article-info {
+  font-size: small;
+  padding-top: .25rem;
+}
+
+.available-articles article .footer .article-info span,
+.my-articles article .footer .article-info span {
+  font-size: .7rem;
+}
+
+.available-articles article .footer .menu,
+.my-articles article .footer .menu {
+  padding: .6rem .8rem;
+  margin-top: .1em;
+  margin-bottom: .1em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.available-articles article .footer .menu i,
+.my-articles article .footer .menu i {
+  font-weight: 300;
+}
+
+.read-article main article {
+  background-color: rgba(0, 0, 0, .01);
+  padding: 0.11rem;
+  word-wrap: break-spaces;
+}
+
+.read-article main article header {
+  background-color: rgba(0, 0, 0, 0.02);
+  margin: 0 0 0 0;
+  border-radius: .2em .2em 0 0;
+  padding: 1.5em 1em;
+  font-size: .9rem;
+}
+
+.read-article main article header .author span {
+  font-weight: 600;
+  font-size: .95rem;
+}
+
+.read-article main article img {
+  max-width: 100%;
+  max-height: 60vh;
+  border-radius: 0 0 .2em .2em;
+}
+
+.read-article main article h1 {
+  text-align: center;
+  padding: 0 0;
+  margin: .15rem 0;
+}
+
+.read-article main article p {
+  text-align: justify;
+}
+
+.read-article main .info-holder {
+  top: 15em;
+}
+
+.read-article main .comment-holder {
+  background-color: rgba(0, 0, 0, .004);
+  height: auto;
+  padding: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.read-article main .comment-holder .field {
+  width: 80%;
+}
+
+.read-article main .comment-holder button {
+  width: 18.2%;
+  height: 2.55rem;
+}
+
+.read-article main .comment-holder .comments {
+  max-height: 20rem;
+  width: 100%;
+  padding-top: 1em;
+  overflow-y: auto;
+}
+
+.read-article main .comment-holder .comments .item {
+  background-color: rgba(0, 0, 0, .01);
+  padding: .8em;
+}
+
+.read-article main .comment-holder .comments .item:first-child {
+  border-radius: .3em .3em 0 0;
+}
+
+.read-article main .comment-holder .comments .item:last-child {
+  border-radius: 0 0 .3em .3em;
+}
+
+.read-article main .comment-holder .comments .item p {
+  margin: 0 0;
+  text-align: left;
+  word-wrap: break-spaces;
+}
+
+.read-article main .comment-holder .comments .item b {
+  margin: 0 0;
+}
+
+.budge {
+  font-weight: 500;
+}
+
+.my-articles article .footer .delete-article {
+  background-color: rgba(255, 0, 0, .5);
+}

@@ -1,0 +1,322 @@
+/**
+* Teamwork Application Styles
+ */
+ @import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+ /**
+  *  Import font awesome
+  */
+ @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css");
+ 
+ body {
+     font-family: 'Nunito', sans-serif;
+     margin: 0;
+     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+ }
+ 
+ .container {
+     width: 100%;
+     padding-right: 15px;
+     padding-left: 15px;
+     margin-right: auto;
+     margin-left: auto;
+ }
+ 
+ @media (min-width: 576px) {
+     .container {
+         max-width: 540px;
+     }
+ }
+ 
+ @media (min-width: 768px) {
+     .container {
+         max-width: 720px;
+     }
+ }
+ 
+ @media (min-width: 992px) {
+     .container {
+         max-width: 960px;
+     }
+ }
+ 
+ @media (min-width: 1200px) {
+     .container {
+         max-width: 1140px;
+     }
+ }
+ 
+ header, footer {
+     background-color: #fff;
+     z-index: 999;
+     border-bottom: 1px solid #ebebeb;
+     box-shadow: 0 0 6px #ebebeb;
+     padding: 1em;
+ }
+ 
+ header .title,
+ footer .title {
+     font-size: 1.9em;
+     font-weight: 700;
+     background: -webkit-linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+ }
+ 
+ .sticky-top {
+     position: -webkit-sticky !important;
+     position: sticky !important;
+     align-self: flex-start;
+     top: 0;
+ }
+ 
+ .sticky-bottom {
+     position: -webkit-sticky !important;
+     position: sticky !important;
+     align-self: flex-start;
+     bottom: 0;
+ }
+ 
+ .flex {
+     display: flex;
+     flex-wrap: wrap;
+ }
+ 
+ .flex-row {
+     flex-direction: row;
+     vertical-align: middle;
+ }
+ 
+ .flex-column {
+     flex-direction: column;
+ }
+ 
+ .content-center {
+     justify-content: center;
+ }
+ 
+ .space-between {
+     justify-content: space-between;
+ }
+ 
+ .space-around {
+     justify-content: space-around;
+ }
+ 
+ .space-evenly {
+     justify-content: space-evenly;
+ }
+ 
+ .left {
+     float: left;
+ }
+ 
+ .margin-10 {
+     margin: 10px !important;
+ }
+ 
+ .margin-20 {
+     margin: 20px !important;
+ }
+ 
+ .margin-30 {
+     margin: 30px !important;
+ }
+ 
+ .margin-vertical-10 {
+     margin-top: 10px !important;
+     margin-bottom: 10px !important;
+ }
+ 
+ .margin-vertical-20 {
+     margin-top: 20px !important;
+     margin-bottom: 20px !important;
+ }
+ 
+ .margin-vertical-30 {
+     margin-top: 30px !important;
+     margin-bottom: 30px !important;
+ }
+ 
+ .margin-horizontal-10 {
+     margin-left: 10px !important;
+     margin-right: 10px !important;
+ }
+ 
+ .margin-horizontal-20 {
+     margin-left: 20px !important;
+     margin-right: 20px !important;
+ }
+ 
+ .margin-horizontal-30 {
+     margin-left: 30px !important;
+     margin-right: 30px !important;
+ }
+ 
+ .margin-right-5 {
+     margin-right: 5px !important;
+ }
+ 
+ .margin-left-5 {
+     margin-left: 5px !important;
+ }
+ 
+ .margin-right-10 {
+     margin-right: 10px !important;
+ }
+ 
+ .margin-left-10 {
+     margin-left: 10px !important;
+ }
+ 
+ .margin-top-5 {
+     margin-top: 5px !important;
+ }
+ 
+ .margin-bottom-5 {
+     margin-bottom: 5px !important;
+ }
+ 
+ .margin-top-10 {
+     margin-top: 10px !important;
+ }
+ 
+ .margin-bottom-10 {
+     margin-bottom: 10px !important;
+ }
+ 
+ .padding-10 {
+     padding: 10px !important;
+ }
+ 
+ .padding-20 {
+     padding: 20px !important;
+ }
+ 
+ .padding-30 {
+     padding: 30px !important;
+ }
+ 
+ .padding-vertical-30 {
+     margin-top: 30px !important;
+     margin-bottom: 30px !important;
+ }
+ 
+ .width-5 {
+     width: 5%;
+ }
+ 
+ .width-25 {
+     width: 25%;
+ }
+ 
+ .width-50 {
+     width: 50%;
+ }
+ 
+ .width-75 {
+     width: 75%;
+ }
+ 
+ .width-100 {
+     width: 100%;
+ }
+ 
+ .right {
+     float: right;
+ }
+ 
+ a.button {
+     text-decoration: none;
+ }
+ 
+ .color-white {
+     background-color: #ffffff !important;
+ }
+ 
+ .shadow {
+     box-shadow: 0 0 4px #ebebeb, 0 0 4px #ebebeb, 0 0 4px #fdfbfb;
+ }
+ 
+ .shadow-8 {
+     box-shadow: 0 0 8px #ebebeb, 0 0 8px #ebebeb, 0 0 8px #fdfbfb;
+ }
+ 
+ .shadow-12 {
+     box-shadow: 0 0 12px #ebebeb, 0 0 12px #ebebeb, 0 0 12px #fdfbfb;
+ }
+ 
+ .button {
+     cursor: pointer;
+     min-height: 1em;
+     outline: none;
+     border: none;
+     vertical-align: middle;
+     background: #E0E1E2 none;
+     color: rgba(0, 0, 0, 0.6);
+     padding: 0.5em 1em 0.5em;
+     border-radius: 0.2rem;
+     text-align: center;
+     display: table-cell;
+     font-family: 'Nunito', sans-serif;
+ }
+ 
+ .primary-color {
+     background-color: #231557 !important;
+     color: #ffffff;
+ }
+ 
+ .active-button {
+     background-color: #44107A !important;
+     color: #ffffff;
+     font-weight: 500;
+ }
+ 
+ .field input {
+     width: 100%;
+     padding: 0.5em 0 0.5em 0.5em;
+     font-size: 1rem;
+     line-height: 1.5;
+     color: #495057;
+     background-color: #fff;
+     border: 1px solid #ced4da;
+     border-radius: 0.15rem;
+     font-family: 'Nunito', sans-serif;
+ }
+ .field select {
+     width: 100%;
+     background: #FFFFFF;
+     border: 1px solid rgba(34, 36, 38, 0.15);
+     border-radius: 0.15rem;
+     padding: 0.8em 0 0.8em 0.8em;
+     font-family: 'Nunito', sans-serif;
+ }
+ 
+ .field input:focus, .field select:focus {
+     border-color: #453376;
+     box-shadow: 0 1px 16px #ced4da;
+ }
+ 
+ .field label {
+     display: block;
+     margin: 0 0 .28571429rem 0;
+     color: rgba(0, 0, 0, .87);
+     font-size: .92857143em;
+     font-weight: 700;
+     text-transform: none;
+ }
+ 
+ .text-center {
+     text-align: center;
+ }
+ 
+ .text-left {
+     text-align: left;
+ }
+ 
+ .text-right {
+     text-align: right;
+ }
+ 
+ .border-rounded {
+     border-radius: 0.3em;
+ }

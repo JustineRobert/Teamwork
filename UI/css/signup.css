@@ -1,0 +1,28 @@
+form .field {
+  margin-bottom: 1em;
+}
+form {
+  background-image: url("../assets/images/signup_form_bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  box-shadow: 0px 5px 20px #ebedee;
+  margin-top: 3rem !important;
+
+  margin-bottom: 3rem !important;
+}
+form .field input, form .field select {
+  background-color: rgba(255, 255, 255, .7);
+  font-weight: 300;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+form .field input:focus, form .field select:focus {
+  background-color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+form .field input {
+  width: 98%;
+}

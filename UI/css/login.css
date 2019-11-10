@@ -1,0 +1,20 @@
+a.forget-password {
+  text-decoration: none;
+  opacity: .5;
+  color: #453376;
+}
+form {
+  background-image: url("../assets/images/login_form_bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  box-shadow: 0px 5px 20px #ebedee;
+  margin-top: 8rem !important;
+  margin-bottom: 8rem !important;
+}
+form h2 {
+  margin: 0 0 ;
+  color: #453376;
+}
+form .field input {
+  width: 98%;
+}

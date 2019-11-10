@@ -1,0 +1,432 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Teamwork is an internal social network for organizations’ employees. The goal of this application is to facilitate more interaction between colleagues and facilitate team bonding",
+    "version": "1.0.0",
+    "title": "Teamwork"
+  },
+  "host": "teamworkadc.herokuapp.com",
+  "basePath": "/api/v1/",
+  "tags": [
+    {
+      "name": "Auth",
+      "description": "Authentication Endpoints"
+    },
+    {
+      "name": "Articles",
+      "description": "Access to Articles API endpoints"
+    },
+    {
+      "name": "Comments",
+      "description": "Access to comments API endpoints"
+    }
+  ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/auth/signin/": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "User login",
+        "description": "User Login endpoint",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "User credentials to be used for login",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Signin"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User is successfully logged in"
+          },
+          "400": {
+            "description": "Invalid credentials"
+          },
+          "422": {
+            "description": "Validation error"
+          }
+        }
+      }
+    },
+    "/auth/signup/": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "User sign up",
+        "description": "User Sign Up endpoint",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "User credentials to be used for creating account",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Signup"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "User created successfully"
+          },
+          "422": {
+            "description": "Validation error"
+          }
+        }
+      }
+    },
+    "/articles/": {
+      "post": {
+        "tags": [
+          "Articles"
+        ],
+        "summary": "Create new articles",
+        "description": "This can only be done by logged in user.",
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Data needed to create new articles",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Article"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Article successfully created"
+          },
+          "422": {
+            "description": "Validation error"
+          }
+        }
+      }
+    },
+    "/articles/{articleId}": {
+      "get": {
+        "tags": [
+          "Articles"
+        ],
+        "summary": "Get a single article",
+        "description": "This can only be done by logged in user.",
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "articleId",
+            "in": "path",
+            "type": "integer",
+            "description": "Article id needs to be specified",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Articles"
+        ],
+        "summary": "Edit an articles",
+        "description": "This can only be done by logged in user.",
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "articleId",
+            "in": "path",
+            "type": "integer",
+            "description": "Article id needs to be specified",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Data needed to create new articles",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Article"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Article successfully updated"
+          },
+          "422": {
+            "description": "Validation error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Articles"
+        ],
+        "summary": "Delete an articles",
+        "description": "This can only be done by logged in user.",
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "articleId",
+            "in": "path",
+            "type": "integer",
+            "description": "Article id needs to be specified",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Article deleted successfully"
+          },
+          "404": {
+            "description": "Article not found !"
+          }
+        }
+      }
+    },
+    "/articles/{articleId}/comments": {
+      "post": {
+        "tags": [
+          "Comments"
+        ],
+        "summary": "Add new comment",
+        "description": "This can only be done by logged in user.",
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "articleId",
+            "in": "path",
+            "type": "integer",
+            "description": "Article id need to specify",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "422": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/feeds/": {
+      "get": {
+        "tags": [
+          "Articles"
+        ],
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "summary": "User can view all articles",
+        "description": "This can only be done by the logged in user.",
+        "consumes": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Feeds successfully"
+          }
+        }
+      }
+    },
+    "/feeds/:tagId/tags": {
+      "get": {
+        "tags": [
+          "Articles"
+        ],
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "summary": "User can view articles by tag",
+        "description": "This can only be done by the logged in user.",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/author/articles/:authorId": {
+      "get": {
+        "tags": [
+          "Articles"
+        ],
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "summary": "User can view articles by author",
+        "description": "This can only be done by the logged in user.",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "token",
+      "in": "header"
+    }
+  },
+  "definitions": {
+    "Signin": {
+      "type": "object",
+      "required": [
+        "email",
+        "password"
+      ],
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "Signup": {
+      "type": "object",
+      "required": [
+        "firstName",
+        "lastName",
+        "email",
+        "password",
+        "gender",
+        "jobRole",
+        "department",
+        "address"
+      ],
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "jobRole": {
+          "type": "string"
+        },
+        "department": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        }
+      }
+    },
+    "Article": {
+      "type": "object",
+      "required": [
+        "title",
+        "article",
+        "image"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "article": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
