@@ -1,5 +1,5 @@
 const deleteArticle = (slug, title) => {
-  confirm("Are you sure, you want to delete this article\n"+title);
+  confirm("Are you sure, you want to delete this article?\n"+title);
 };
 
 const userLogin = () => {
