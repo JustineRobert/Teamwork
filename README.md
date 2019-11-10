@@ -20,7 +20,7 @@ App Info
 Author
 
 
-Justine Robert Igune https://github.com/JustineRobert/
+Justine Robert Igune https://github.com/JustineRobert/Teamwork#teamwork
 
 
 Version
