@@ -1,11 +1,10 @@
 import jwt from 'jsonwebtoken';
 
-const Auth = {
-  async verifyToken(request, response, next) {
-    const { token } = request.headers;
-    if (!token) {
-      return response.status(401)
-        .send({
+async verifyToken(request, response, next) {
+  const { token } = request.headers;
+  if (!token) {
+    return response.status(401)
+      .send({
           status: response.statusCode,
           message: 'Unauthorized, No token provided',
         });
