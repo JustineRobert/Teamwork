@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Share Article - Teamwork</title>
+    <link rel="stylesheet" href="../css/style.css" media="all">
+    <link rel="stylesheet" href="../css/user_styles.css" media="all">
+</head>
+<body class="share-article">
+<div class="container">
+    <header class="flex flex-row space-between sticky-top">
+        <div class="title left"><a href="../index.html">teamwork</a></div>
+        <div class="flex flex-row right user-menus">
+            <a href="./articles.html" class="button">Home</a>
+            <a href="./shareArticle.html" class="button">New Article</a>
+            <a href="./myArticles.html" class="button">My Articles</a>
+            <a href="./login.html" class="button">Logout</a>
+        </div>
+    </header>
+    <main class="flex flex-column space-between content-center color-white shadow padding-30">
+        <h2 class="text-center page-title">Create Article</h2>
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="field margin-bottom-10">
+                <label for="title">Title</label>
+                <input type="text" class="" name="title" id="title" placeholder="Article Title" required autofocus
+                       autocomplete="off">
+            </div>
+            <div class="field margin-bottom-10">
+                <label for="image">Image</label>
+                <input type="file" class="" name="image" id="image" placeholder="Article Image" required>
+            </div>
+            <div class="field margin-bottom-10">
+                <label for="article">Content</label>
+                <textarea name="article" id="article" cols="30" rows="15"
+                          class="width-100"
+                          placeholder="Article Content" required></textarea>
+            </div>
+            <button type="submit" class="button primary-color padding-10 margin-vertical-20 width-25">Share Article
+            </button>
+        </form>
+    </main>
+    <footer class="flex flex-row content-center">
+        <div class="">Copyright © 2019 Teamwork, All Rights Reserved.</div>
+    </footer>
+</div>
+<script src="./js/scripts.js" type="application/javascript"></script>
+</body>
+</html>

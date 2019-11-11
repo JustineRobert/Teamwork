@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Article - Teamwork</title>
+    <link rel="stylesheet" href="../css/style.css" media="all">
+    <link rel="stylesheet" href="../css/user_styles.css" media="all">
+</head>
+<body class="edit-article">
+<div class="container">
+    <header class="flex flex-row space-between sticky-top">
+        <div class="title left"><a href="../index.html">teamwork</a></div>
+        <div class="flex flex-row right user-menus">
+            <a href="./articles.html" class="button">Home</a>
+            <a href="./shareArticle.html" class="button">New Article</a>
+            <a href="./myArticles.html" class="button">My Articles</a>
+            <a href="./login.html" class="button">Logout</a>
+        </div>
+    </header>
+    <main class="flex flex-column space-between content-center color-white shadow padding-30">
+        <h2 class="text-center page-title">Update Article</h2>
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="field margin-bottom-10">
+                <label for="title">Title</label>
+                <input type="text" class="" name="title" id="title" placeholder="Article Title" required autofocus
+                       value="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                       autocomplete="off">
+            </div>
+            <div class="field margin-bottom-10">
+                <label for="image">Image</label>
+                <input type="file" class="width-50" name="image" id="image" placeholder="Article Image" required>
+                <img src="../assets/images/home_banner_bg.jpeg" class="shadow-12" alt="Article thumbnail">
+            </div>
+            <div class="field margin-bottom-10">
+                <label for="article">Content</label>
+                <textarea name="article" id="article" cols="30" rows="15"
+                          class="width-100"
+                          placeholder="Article Content" required>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus viverra vitae congue eu consequat ac felis. Enim nunc faucibus a pellentesque sit amet. Vitae ultricies leo integer malesuada nunc. Volutpat blandit aliquam etiam erat velit scelerisque in. Elit eget gravida cum sociis natoque. Euismod elementum nisi quis eleifend. Quam viverra orci sagittis eu volutpat odio facilisis mauris sit. Ut morbi tincidunt augue interdum velit euismod in pellentesque massa. Vel quam elementum pulvinar etiam non quam lacus suspendisse. Volutpat sed cras ornare arcu. Ac turpis egestas integer eget aliquet nibh praesent tristique. In hac habitasse platea dictumst quisque sagittis. Suspendisse interdum consectetur libero id faucibus. Lobortis mattis aliquam faucibus purus in massa tempor.</textarea>
+            </div>
+            <button type="submit" class="button primary-color padding-10 margin-vertical-20 width-25">Update
+            </button>
+        </form>
+    </main>
+    <footer class="flex flex-row content-center">
+        <div class="">Copyright © 2019 Teamwork, All Rights Reserved.</div>
+    </footer>
+</div>
+<script src="./js/scripts.js" type="application/javascript"></script>
+</body>
+</html>

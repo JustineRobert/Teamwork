@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Articles - Teamwork</title>
+    <link rel="stylesheet" href="../css/style.css" media="all">
+    <link rel="stylesheet" href="../css/user_styles.css" media="all">
+</head>
+<body class="my-articles">
+<div class="container">
+    <header class="flex flex-row space-between sticky-top">
+        <div class="title left"><a href="../index.html">teamwork</a></div>
+        <div class="flex flex-row right user-menus">
+            <a href="./articles.html" class="button">Home</a>
+            <a href="./shareArticle.html" class="button">New Article</a>
+            <a href="./myArticles.html" class="button">My Articles</a>
+            <a href="./login.html" class="button">Logout</a>
+        </div>
+    </header>
+    <main class="flex flex-column space-between content-center color-white shadow padding-30">
+        <h2 class="text-center page-title">My Articles</h2>
+        <section class="article-holder flex flex-row space-between">
+            <article class="flex flex-column shadow content-center">
+                <div class="body">
+                    <img src="https://source.unsplash.com/user/uh/512x550"
+                         class=""
+                         alt="Thumbnail">
+                    <p>Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique senectus et netus
+                        et</p>
+                </div>
+                <div class="footer flex flex-row space-between content-center padding-10">
+                    <a href="./editArticle.html" class="button">Edit</a>
+                    <button class="button delete-article"
+                            data-article-title="article title"
+                            onclick="deleteArticle('slug', 'Venenatis a condimentum vitae sapien pellentesque')"
+                            data-article-slug="article-slug">Delete
+                    </button>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer class="flex flex-row content-center">
+        <div class="">Copyright © 2019 Teamwork, All Rights Reserved.</div>
+    </footer>
+</div>
+<script src="../js/scripts.js" type="application/javascript"></script>
+</body>
+</html>

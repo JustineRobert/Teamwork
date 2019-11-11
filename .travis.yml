@@ -62,3 +62,5 @@ after_script:
     "psql -c 'create database teamwork_db_test;' -U postgres"
   ]
 }
+
+travis encrypt MY_SECRET_ENV=super_secret --add env.global

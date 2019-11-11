@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "title": "Teamwork"
   },
-  "host": "teamworkadc.herokuapp.com",
+  "host": "teamworktitech.herokuapp.com",
   "basePath": "/api/v1/",
   "tags": [
     {

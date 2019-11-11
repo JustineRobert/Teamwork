@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Teamwork</title>
+    <link rel="stylesheet" href="../css/style.css" media="all">
+    <link rel="stylesheet" href="../css/login.css" media="all">
+</head>
+<body>
+<div class="container">
+    <footer class="flex flex-row space-between sticky-top">
+        <div class="title left"><a href="../index.html">teamwork</a></div>
+        <div class="flex flex-row right space-evenly">
+            <a href="./login.html" class="button margin-horizontal-10 active-button">Login</a>
+            <a href="signup.html" class="button primary-color">Sign Up</a>
+        </div>
+    </footer>
+    <main class="flex-column space-between color-white shadow">
+        <div class="flex flex-row content-center">
+            <form action="./articles.html" method="post" role="form" id="loginForm" class="flex flex-column content-center width-50 padding-30 border-rounded">
+                <h2 class="text-center">Login</h2>
+                <div class="field margin-vertical-30">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password">
+                </div>
+                <div class="flex flex-row space-between content-center">
+                    <button type="button" id="loginButton"
+                            onclick="userLogin()"
+                            class="button primary-color margin-vertical-30 padding-10 width-25">Login</button>
+                    <a href="#" class="margin-top-10 forget-password">Forget Password</a>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="flex flex-row content-center">
+        <div class="">Copyright © 2019 Teamwork, All Rights Reserved.</div>
+    </footer>
+</div>
+<script src="../js/scripts.js" type="application/javascript"></script>
+</body>
+</html>
