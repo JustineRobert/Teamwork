@@ -1,4 +1,4 @@
-import Joi from '@hapi/joi';
+const Joi = require('@hapi/joi');
 
 const article = {
   title: Joi.string()
@@ -38,4 +38,4 @@ const articleSchema = {
   '/articles/:articleId/comments/': commentSchema,
 };
 
-export default articleSchema;
+module.exports = articleSchema;

@@ -1,7 +1,7 @@
-import User from './user';
-import Article from './article';
-import Comment from './comment';
-import Category from './category';
+const User = require('./user');
+const Article = require('./article');
+const Comment = require('./comment');
+const Category = ('./category');
 
 export {
   User, Article, Comment, Category,

@@ -1,5 +1,4 @@
-import Database from '../database/database';
-
+const Database = require('../database/database');
 class User extends Database {
   constructor() {
     super('employees');
@@ -10,4 +9,4 @@ class User extends Database {
   }
 }
 
-export default User;
+module.exports =  User;

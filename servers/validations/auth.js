@@ -47,4 +47,4 @@ const userSchemas = {
   '/auth/signup/': signupSchema,
 };
 
-export default userSchemas;
+module.exports = userSchemas;

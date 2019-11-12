@@ -1,4 +1,4 @@
-import jwt from 'jsonwebtoken';
+import { verify } from 'jsonwebtoken';
 
 async verifyToken(request, response, next) {
   const { token } = request.headers;
@@ -11,7 +11,7 @@ async verifyToken(request, response, next) {
     }
 
     try {
-      const user = await jwt.verify(token, process.env.JWT_SECRET);
+      const user = await verify(token, process.env.JWT_SECRET);
       if (!user) {
         return response.status(401)
           .send({
@@ -31,4 +31,4 @@ async verifyToken(request, response, next) {
   },
 };
 
-export default Auth;
+module.exports = Auth;

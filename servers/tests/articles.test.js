@@ -1,9 +1,9 @@
-import chai from 'chai';
-import chaiHttp from 'chai-http';
-import chaiThings from 'chai-things';
-import { describe } from 'mocha';
-import server from '../../index';
-import { users, auth, articles } from '../mock';
+const chai = require('chai');
+const chaiHttp = require('chai-http');
+const chaiThings = require('chai-things');
+const { describe } = require('mocha');
+const server = require('../../index');
+const { users, auth, articles } = require('../mock');
 
 chai.should();
 chai.use(chaiThings);
@@ -52,9 +52,9 @@ describe('Articles endpoint tests', () => {
   });
   it('should create an article', (done) => {
     const data = {
-      title: 'Eget duis at tellus at urna condimentum mattis pellentesque id',
-      image: 'https://images.unsplash.com/photo-1568685002001-1017b6b99e44?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=610&q=80',
-      article: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.',
+      image: 'https://www.bing.com/images/search?view=detailV2&ccid=cqz%2F%2F5Wk&id=BAC739AEE0CA90D9FF16A3B2D98491478E400D55&thid=OIP.cqz__5WkVsR_NlbwOyl9CgHaFj&mediaurl=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F72%2Fac%2Fff%2F72acffff95a456c47f3656f03b297d0a.jpg&exph=2736&expw=3648&q=Jamaica+Scenery&simid=608048260347202531&selectedindex=34&ajaxhist=0&vt=0&sim=11',
+      article: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.',
     };
     chai.request(server)
       .post('/api/v2/articles')
@@ -78,7 +78,7 @@ describe('Articles endpoint tests', () => {
     done();
   });
 
-  it('should not found article', (done) => {
+  it('should not find article', (done) => {
     const articleID = -1;
     chai.request(server)
       .get(`/api/v2/articles/${articleID}`)
@@ -92,7 +92,7 @@ describe('Articles endpoint tests', () => {
     done();
   });
 
-  it('should found article', (done) => {
+  it('should find article', (done) => {
     const articleID = 1;
     chai.request(server)
       .get(`/api/v2/articles/${articleID}`)
@@ -162,7 +162,7 @@ describe('Articles endpoint tests', () => {
   });
 
   it('should add a comment', (done) => {
-    const comment = 'this is what i used to say to people and didn\'t believe me !!';
+    const comment = 'This is what i used to say to people and they didn\'t believe me !!';
     const articleId = 1;
     chai.request(server)
       .post(`/api/v2/articles/${articleId}/comments`)
@@ -180,9 +180,9 @@ describe('Articles endpoint tests', () => {
   it('should fail to edit article due to unavailability of articleId', (done) => {
     const articleId = 800;
     const data = {
-      title: 'Eget duis at tellus at urna condimentum mattis pellentesque id',
-      image: 'https://images.unsplash.com/photo-1568685002001-1017b6b99e44?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=610&q=80',
-      article: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.',
+      image: 'https://www.bing.com/images/search?view=detailV2&ccid=jU9tpIOV&id=53BBE3B00447D2E3748DB006A92EB4D733857E9A&thid=OIP.jU9tpIOVQJsx6Z2x8XAHOgHaE8&mediaurl=http%3A%2F%2Ftravelfeatured.com%2Fwp-content%2Fuploads%2F2014%2F01%2Fnegril-jamaica-5.jpg&exph=683&expw=1024&q=Jamaica+Scenery&simid=608044004021043282&selectedindex=36&ajaxhist=0&vt=0&sim=11',
+      article: 'Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia.',
     };
     chai.request(server)
       .patch(`/api/v2/articles/${articleId}`)
@@ -212,9 +212,9 @@ describe('Articles endpoint tests', () => {
   it('should edit article', (done) => {
     const articleId = 1;
     const data = {
-      title: 'Eget duis at tellus at urna condimentum mattis pellentesque id',
-      image: 'https://images.unsplash.com/photo-1568685002001-1017b6b99e44?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=610&q=80',
-      article: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.',
+      image: 'https://www.bing.com/images/search?view=detailV2&ccid=3CxcBqOL&id=E75D172EED4E7D04690C42572063F0B40980BB8E&thid=OIP.3CxcBqOL81wq9aNrcfl4qAHaFj&mediaurl=https%3A%2F%2Fi.pinimg.com%2F736x%2Ff8%2Ff7%2F1b%2Ff8f71b15c3a286792d3e64ad643a17c1--jamaica-scenery.jpg&exph=552&expw=736&q=Jamaica+Scenery&simid=608053298324836072&selectedindex=50&ajaxhist=0&vt=0&sim=11',
+      article: 'Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.',
     };
     chai.request(server)
       .patch(`/api/v2/articles/${articleId}`)

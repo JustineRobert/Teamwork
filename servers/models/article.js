@@ -1,5 +1,5 @@
-import moment from 'moment';
-import Database from '../database/database';
+const moment = require('moment';)
+const Database = require('../database/database');
 
 class Article extends Database {
   constructor() {
@@ -19,4 +19,4 @@ class Article extends Database {
   }
 }
 
-export default Article;
+module.exports = Article;

@@ -1,8 +1,8 @@
-import chai from 'chai';
-import chaiHttp from 'chai-http';
-import chaiThings from 'chai-things';
-import { describe } from 'mocha';
-import server from '../../index';
+const chai = require('chai');
+const chaiHttp = require('chai-http');
+const chaiThings = require('chai-things');
+const { describe } = require('mocha');
+const server = require('../../index');
 
 
 chai.should();

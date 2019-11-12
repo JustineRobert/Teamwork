@@ -1,5 +1,5 @@
-import { CreateEmployeesTable, CreateArticlesTable, CreateCategoriesTable } from './migrations';
-import CreateCommentsTable from './migrations/create_comments_table';
+const { CreateEmployeesTable, CreateArticlesTable, CreateCategoriesTable } = require('./migrations');
+const CreateCommentsTable = require('./migrations/create_comments_table');
 
 const InitDB = async () => {
   await CreateEmployeesTable.run();

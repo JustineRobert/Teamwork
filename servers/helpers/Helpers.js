@@ -1,5 +1,5 @@
-import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 class Helpers {
   static hashPassword(password) {
@@ -43,9 +43,9 @@ class Helpers {
   static dbError(response, query) {
     if (query.errors) {
       console.log(query.errors);
-      return Helpers.sendResponse(response, 501, 'Oops Something went wrong.');
+      return Helpers.sendResponse(response, 501, 'Oops! Something went wrong.');
     }
   }
 }
 
-export default Helpers;
+module.exports = Helpers;

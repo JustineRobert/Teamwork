@@ -1,7 +1,7 @@
-import chai from 'chai';
-import sinon from 'sinon';
-import jwt from 'jsonwebtoken';
-import Auth from '../middlewares/auth';
+const chai = require('chai');
+const sinon = require('sinon');
+const jwt = require('jsonwebtoken');
+const Auth = require('../middlewares/auth');
 
 const { expect } = chai;
 
@@ -21,26 +21,26 @@ describe('Test Auth Middleware', () => {
     next = sinon.spy();
   });
 
-  it('next should not be called if no token provided', (done) => {
+  it('next should not be called if no token is provided', (done) => {
     Auth.verifyToken(request, response, next);
     expect(next.called).to.equal(false);
     done();
   });
 
-  it('should return 401 status code if no token provided', (done) => {
+  it('should return 401 status code if no token is provided', (done) => {
     Auth.verifyToken(request, response, next);
     expect(response.status.getCall(0).args[0]).to.equal(401);
     done();
   });
 
-  it('next should not be called if bad token was provided', (done) => {
+  it('next should not be called if bad token is provided', (done) => {
     request.headers.token = 'some authorization header';
     Auth.verifyToken(request, response, next);
     expect(next.called).to.equal(false);
     done();
   });
 
-  it('should return 401 status code if bad token was provided', (done) => {
+  it('should return 401 status code if bad token is provided', (done) => {
     request.headers.token = null;
     Auth.verifyToken(request, response, next);
     expect(response.status.getCall(0).args[0]).to.equal(401);

@@ -1,6 +1,6 @@
-import Database from '../database';
-import { categories } from '../../mock';
-import { Category } from '../../models';
+const Database = require('../database');
+const { categories } = require('../../mock');
+const { Category } = require('../../models');
 
 const database = new Database();
 const category = new Category();
@@ -29,4 +29,4 @@ class CreateCategoriesTable {
   }
 }
 
-export default CreateCategoriesTable;
+module.exports = CreateCategoriesTable;

@@ -1,6 +1,6 @@
-import users from './user';
-import articles from './article';
-import auth from './auth';
-import categories from './categories';
+const users = require('./user');
+const articles = require('./article');
+const auth = require('./auth');
+const categories = require('./categories');
 
 export { users, articles, auth, categories };

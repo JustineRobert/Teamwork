@@ -1,10 +1,10 @@
-import chai from 'chai';
-import chaiHttp from 'chai-http';
-import chaiThings from 'chai-things';
-import { describe } from 'mocha';
-import joi from '@hapi/joi';
-import server from '../../index';
-import users from '../mock/user';
+const chai = require('chai');
+const chaiHttp = require('chai-http');
+const chaiThings = require('chai-things');
+const { describe } = require('mocha');
+const joi = require('@hapi/joi');
+const server = require('../../index');
+const users = require('../mock/user');
 
 chai.should();
 chai.use(chaiThings);
@@ -32,7 +32,7 @@ describe('Create user account endpoint', () => {
         response.body.should.have.property('status')
           .equal(201);
         response.body.should.have.property('message')
-          .equal('User created successfully');
+          .equal('User is successfully created');
         response.body.should.have.property('data');
         response.body.data.should.be.an('Object');
         response.body.data.should.have.property('token');
