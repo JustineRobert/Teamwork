@@ -1,4 +1,4 @@
-import Joi from '@hapi/joi';
+const Joi = require('@hapi/joi');
 
 const signupSchema = Joi.object()
   .keys({
@@ -18,7 +18,7 @@ const signupSchema = Joi.object()
       .min(6)
       .required(),
     gender: Joi.string()
-      .valid(['male', 'female'])
+      .valid(['male', 'female', 'others'])
       .required(),
     jobRole: Joi.string()
       .min(3)
