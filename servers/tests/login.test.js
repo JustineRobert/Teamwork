@@ -1,8 +1,8 @@
-import chai from 'chai';
-import chaiThings from 'chai-things';
-import chaiHttp from 'chai-http';
-import server from '../../index';
-import users from '../mock/user';
+const chai = require('chai');
+const chaiThings = require('chai-things');
+const chaiHttp = require('chai-http');
+const server = require('../../index');
+const users = ('../mock/user');
 
 chai.should();
 chai.use(chaiThings);

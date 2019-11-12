@@ -1,7 +1,7 @@
-import moment from 'moment';
-import Helpers from '../helpers/Helpers';
-import { Article, Category, Comment } from '../models';
-import { articles } from '../mock';
+const moment = require('moment');
+const Helpers = require('../helpers/Helpers');
+const { Article, Category, Comment } = require('../models');
+const { articles } = require('../mock');
 
 const Model = new Article();
 
@@ -103,4 +103,5 @@ class ArticlesController {
   }
 }
 
-export default ArticlesController;
+module.exports = ArticlesController;
+

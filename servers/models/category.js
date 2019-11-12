@@ -1,5 +1,5 @@
-import Database from '../database/database';
-import Article from './article';
+const Database =  require('../database/database');
+const Article = require('./article');
 
 class Category extends Database {
   constructor(id = undefined) {
@@ -15,4 +15,4 @@ class Category extends Database {
   }
 }
 
-export default Category;
+module.exports = Category;

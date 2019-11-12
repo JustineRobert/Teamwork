@@ -1,7 +1,7 @@
-import Database from '../database';
-import { User } from '../../models';
-import users from '../../mock/user';
-import Helpers from '../../helpers/Helpers';
+const Database = require('../database');
+const { User } = require('../../models');
+const users = require('../../mock/user');
+const Helpers = require('../../helpers/Helpers');
 
 const database = new Database();
 const dummy = { ...users[0] };
@@ -42,4 +42,4 @@ class CreateEmployeesTable {
   }
 }
 
-export default CreateEmployeesTable;
+module.exports = CreateEmployeesTable;

@@ -1,7 +1,7 @@
-import _ from 'lodash';
-import Joi from '@hapi/joi';
-import Schemas from '../validations';
-import Helpers from '../helpers/Helpers';
+const _ = require('lodash');
+const Joi = require('@hapi/joi');
+const Schemas = require('../validations');
+const Helpers = require('../helpers/Helpers');
 
 const getSchema = (route, method) => {
   const { userSchemas, articleSchema } = Schemas;
@@ -37,4 +37,4 @@ const validation = (request, response, next) => {
   next();
 };
 
-export default validation;
+module.exports = validation;

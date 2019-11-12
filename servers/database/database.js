@@ -1,5 +1,5 @@
-import { Pool } from 'pg';
-import dotenv from 'dotenv';
+const { Pool } = require('pg');
+const dotenv = require('dotenv');
 
 dotenv.config();
 
@@ -64,7 +64,7 @@ class Database {
       };
     }
     return {
-      error: 'Please provide table name & column & value',
+      error: 'Please provide table name, column & value',
     };
   }
 
@@ -120,4 +120,4 @@ class Database {
   }
 }
 
-export default Database;
+module.exports = Database;

@@ -1,7 +1,7 @@
-import Database from '../database';
-import { Article } from '../../models';
-import Helpers from '../../helpers/Helpers';
-import { articles } from '../../mock';
+const Database = require('../database');
+const { Article } = require('../../models');
+const Helpers = require('../../helpers/Helpers');
+const { articles } = require('../../mock');
 
 const database = new Database();
 const dummy = { ...articles[0] };
@@ -43,4 +43,4 @@ class CreateArticlesTable {
   }
 }
 
-export default CreateArticlesTable;
+module.exports = CreateArticlesTable;

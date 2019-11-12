@@ -1,6 +1,6 @@
-import express from 'express';
-import articles from './articles';
-import auth from './auth';
+const express = require('express');
+const articles = require('./articles');
+const auth = require('./auth');
 
 const routers = new express.Router();
 
@@ -12,4 +12,4 @@ routers.route('/').get((request, response) => response.status(400).send({
 routers.use(auth);
 routers.use(articles);
 
-export default routers;
+module.exports = routers;

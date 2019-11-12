@@ -1,6 +1,6 @@
-import Helpers from '../helpers/Helpers';
-import users from '../mock/user';
-import { User } from '../models';
+const Helpers = require('../helpers/Helpers');
+const users = require('../mock/user');
+const { User } = require('../models');
 
 const user = new User();
 
@@ -29,4 +29,4 @@ class UserController {
   }
 }
 
-export default UserController;
+module.exports = UserController;
