@@ -10,5 +10,3 @@ Teamwork is an internal social network for employees of an organization. The goa
 Quick start with the App
 
 Install dependencies
-
-https://img.shields.io/scrutinizer/coverage/g/Justine Robert Igune/Teamwork/Master?style=flat-square
