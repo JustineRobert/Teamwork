@@ -4,25 +4,25 @@
 [![dependencies Status](https://david-dm.org/Flexberry/javascript-project-template/status.svg)](https://david-dm.org/Flexberry/javascript-project-template)
 [![Maintainability](https://api.codeclimate.com/v1/badges/3e24f5c76db0e112494f/maintainability)](https://codeclimate.com/github/JustineRobert/Teamwork/maintainability)
 
-Description:
+# Description:
 
 Teamwork is an internal social network for employees of an organization. The goal of this application is to facilitate more interaction between colleagues and promote team bonding.
 
-Quick start with the App
+# Quick start with the App
 
-Install dependencies
-
+# Install dependencies
+npm install
 # Setup
 - You need to have `git`, `NodeJS` and `nmp` installed on your local environment.
 - Clone the application with `git clone` command.
 - `npm install` to install all the dependencies in local environment.
 
 # Getting Started
-Starting application run the following npm scripts
+To Start application, run the following npm script
 * `npm start` for starting the server.
 
 # Testing
-When you need to test the application and view test coverate run:
+To test the application and view test coverate run:
 * `npm test` for running the tests, and getting coverage summary.
 
 # API
@@ -40,5 +40,27 @@ When you need to test the application and view test coverate run:
 * PATCH `/api/v1/articles/:articleId` Update an article
 * DELETE `/api/v1/articles/:articleId` Delete an article
 
+## App Info
 # Heroku 
+Access link :[Visit the link]().
 
+# Swagger API Documentation
+Access link :[Visit the link]().
+
+# Github-page
+GitHub page (gh-page) of this project accessed using this link [Teamwork](git://github.com/JustineRobert/Teamwork.git).
+
+
+
+### Author
+
+Justine Robert Igune
+[Justine Robert Igune](https://github.com/JustineRobert)
+
+### Version
+
+1.0.0
+
+### License
+
+This project is licensed under the MIT License
