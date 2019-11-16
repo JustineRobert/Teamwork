@@ -4,6 +4,7 @@
 [![dependencies Status](https://david-dm.org/Flexberry/javascript-project-template/status.svg)](https://david-dm.org/Flexberry/javascript-project-template)
 [![Maintainability](https://api.codeclimate.com/v1/badges/3e24f5c76db0e112494f/maintainability)](https://codeclimate.com/github/JustineRobert/Teamwork/maintainability)
 
+<<<<<<< HEAD
 ## Description:
 
 Teamwork is an internal social network for employees of an organization. The goal of this application is to facilitate more interaction between colleagues and promote team bonding.
@@ -19,18 +20,35 @@ Teamwork is an internal social network for employees of an organization. The goa
 # Dev Server (Nodemon)
 - `npm run dev`
 ```
+=======
+# Description:
 
+Teamwork is an internal social network for employees of an organization. The goal of this application is to facilitate more interaction between colleagues and promote team bonding.
+
+# Quick start with the App
+>>>>>>> master
+
+# Install dependencies
+npm install
 # Setup
 - You need to have `git`, `NodeJS` and `nmp` installed on your local environment.
 - Clone the application with `git clone` command.
 - `npm install` to install all the dependencies in local environment.
 
 # Getting Started
+<<<<<<< HEAD
 To Start the application run the following npm script
 * `npm start` for starting the server.
 
 # Testing
 To test the application and view test coverage run:
+=======
+To Start application, run the following npm script
+* `npm start` for starting the server.
+
+# Testing
+To test the application and view test coverate run:
+>>>>>>> master
 * `npm test` for running the tests, and getting coverage summary.
 
 # API
@@ -56,11 +74,22 @@ Access link :[Visit the link]().
 Access link :[Visit the link]().
 
 # Github-page
+<<<<<<< HEAD
 GitHub page (gh-page) of this project accessed using this link [Teamwork]().
 
 ### Author
 Justine Robert Igune
 [Justine Robert Igune Portpolio](https://github.com/JustineRobert/)
+=======
+GitHub page (gh-page) of this project accessed using this link [Teamwork](git://github.com/JustineRobert/Teamwork.git).
+
+
+
+### Author
+
+Justine Robert Igune
+[Justine Robert Igune](https://github.com/JustineRobert)
+>>>>>>> master
 
 ### Version
 
@@ -68,4 +97,8 @@ Justine Robert Igune
 
 ### License
 
+<<<<<<< HEAD
 This project is licensed under the MIT License
+=======
+This project is licensed under the MIT License
+>>>>>>> master
