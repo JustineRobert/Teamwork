@@ -1,4 +1,12 @@
-# node_modules
+node_modules/
+.vscode
+.idea
+.env
+coverage/
+.eslintignore
+.eslintrc.js
+src/dist
+dist/
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
 # Logs
