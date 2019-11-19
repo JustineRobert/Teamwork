@@ -22,6 +22,7 @@
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
     "circular-json": "^0.3.3",
+    "cloudinary": "^1.17.0",
     "cors": "^2.8.5",
     "coverage": "^0.4.1",
     "dotenv": "^8.1.0",
