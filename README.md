@@ -15,7 +15,7 @@ Teamwork is an internal social network for employees of an organization. The goa
 # Install dependencies
 - `npm install`
 
-# Serve on localhost:5000
+# Serve on localhost:5500
 - `npm start`
 # Dev Server (Nodemon)
 - `npm run dev`
@@ -75,7 +75,7 @@ Access link :[Visit the link]().
 
 # Github-page
 <<<<<<< HEAD
-GitHub page (gh-page) of this project accessed using this link [Teamwork]().
+GitHub page (gh-page) of this project accessed using this link [Teamwork](git://github.com/JustineRobert/Teamwork.git).
 
 ### Author
 Justine Robert Igune
