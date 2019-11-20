@@ -1,17 +1,17 @@
-const chai = require('chai');
-const chaiHttp = require('chai-http');
-const chaiThings = require('chai-things');
-const { describe } = require('mocha');
-const server = require('../../index');
+import { should, use, request as _request } from 'chai';
+import chaiHttp from 'chai-http';
+import chaiThings from 'chai-things';
+import { describe } from 'mocha';
+import server from '../../index';
 
 
-chai.should();
-chai.use(chaiThings);
-chai.use(chaiHttp);
+should();
+use(chaiThings);
+use(chaiHttp);
 
 describe('Endpoint prefix', () => {
   it('should return 400 http status', (done) => {
-    chai.request(server)
+    _request(server)
       .get('/api/v2/')
       .end((request, response) => {
         response.body.should.have.property('status')
