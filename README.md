@@ -73,9 +73,9 @@ Access link :[Visit the link]().
 # Swagger API Documentation
 Access link :[Visit the link]().
 
-# Github-page
-Justine Robert Igune
-[GitHub page of this project is accessed using this link:](git://github.com/JustineRobert/Teamwork.git)
+# Github-page of this Project
+
+[GitHub Access link :](git://github.com/JustineRobert/Teamwork.git)
 
 ### Author
 Justine Robert Igune
