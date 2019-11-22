@@ -92,8 +92,7 @@ Justine Robert Igune
 >>>>>>> master
 
 ### Version
-
-1.0.0
+[Pre-release of the project URL:](https://github.com/JustineRobert/Teamwork/releases/tag/v1)
 
 ### License
 
