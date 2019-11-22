@@ -41,6 +41,7 @@
     "sinon-express-mock": "^2.2.1",
     "swagger-ui-express": "^4.0.7",
     "terser": "^4.4.0",
+    "web-animations-js": "^2.3.2",
     "webpack": "^4.41.2"
   },
   "devDependencies": {
