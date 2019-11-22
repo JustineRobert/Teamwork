@@ -4,10 +4,11 @@ const Schemas = require('../validations');
 const Helpers = require('../helpers/Helpers');
 
 const getSchema = (route, method) => {
-  const { userSchemas, articleSchema } = Schemas;
+  const { userSchemas, articleSchema, gifSchema } = Schemas;
   const schemas = {
     auth: userSchemas,
     articles: articleSchema,
+    gifs: gifSchema,
   };
   const routePrefix = _.words(route)[0];
   let schema = _.get(schemas, routePrefix);

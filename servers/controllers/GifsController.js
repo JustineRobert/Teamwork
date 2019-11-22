@@ -3,9 +3,9 @@ const Helpers = require('../helpers/Helpers');
 const { Article, Category, Comment } = require('../models');
 const { articles } = require('../mock');
 
-const Model = new Article();
+const Model = new Gif();
 
-class ArticlesController {
+class GifsController {
   static async store(request, response) {
     const { user } = request;
     const data = {
@@ -15,13 +15,13 @@ class ArticlesController {
     };
     const store = await Model.create(data);
     if (store.errors) Helpers.dbError(response, store);
-    return Helpers.sendResponse(response, 201, 'Article successfully created', data);
+    return Helpers.sendResponse(response, 201, 'Gif successfully created', data);
   }
 
   static async findAll(request, response) {
     const _articles = await Model.all();
-    if (_articles.errors) Helpers.dbError(response, _articles);
-    return Helpers.sendResponse(response, 200, 'Success', _articles.rows);
+    if (_articles.errors) Helpers.dbError(response, _gifs);
+    return Helpers.sendResponse(response, 200, 'Success', _gifs.rows);
   }
 
   static async update(request, response) {
@@ -37,9 +37,9 @@ class ArticlesController {
     });
     if (update.errors) return Helpers.dbError(response, update);
     if (update.count > 0) {
-      return Helpers.sendResponse(response, 200, 'Article successfully edited', data);
+      return Helpers.sendResponse(response, 200, 'Gif successfully edited', data);
     }
-    return Helpers.sendResponse(response, 404, 'Article not found!');
+    return Helpers.sendResponse(response, 404, 'Gif not found!');
   }
 
   static async destroy(request, response) {
@@ -51,9 +51,9 @@ class ArticlesController {
     });
     if (destroy.errors) return Helpers.dbError(response, destroy);
     if (destroy.count > 0) {
-      return Helpers.sendResponse(response, 204, 'Article successfully deleted');
+      return Helpers.sendResponse(response, 204, 'Gif successfully deleted');
     }
-    return Helpers.sendResponse(response, 404, 'Article Not Found!');
+    return Helpers.sendResponse(response, 404, 'Gif Not Found!');
   }
 
   static async findOne(request, response) {
@@ -61,9 +61,9 @@ class ArticlesController {
     const result = await Model.getById(articleId);
     if (result.errors) return Helpers.dbError(response, result);
     if (result.count > 0) {
-      return Helpers.sendResponse(response, 200, 'Article found!', result.row);
+      return Helpers.sendResponse(response, 200, 'Gif found!', result.row);
     }
-    return Helpers.sendResponse(response, 404, 'Article not found!');
+    return Helpers.sendResponse(response, 404, 'Gif not found!');
   }
 
   static async findByCategory(request, response) {
@@ -71,7 +71,7 @@ class ArticlesController {
     const categoryModel = new Category(tagId);
     const results = await categoryModel.articles();
     if (results.errors) return Helpers.dbError(response, results);
-    if (results.count < 1) return Helpers.sendResponse(response, 404, 'No articles found!');
+    if (results.count < 1) return Helpers.sendResponse(response, 404, 'No gifs found!');
     return Helpers.sendResponse(response, 200, 'Success', results.rows);
   }
 
@@ -103,5 +103,4 @@ class ArticlesController {
   }
 }
 
-module.exports = ArticlesController;
-
+module.exports = GifsController;
