@@ -74,7 +74,7 @@ Access link :[Visit the link]().
 Access link :[Visit the link]().
 
 # Github-page
-[GitHub page (gh-page) of this project accessed using this link](git://github.com/JustineRobert/Teamwork.git)
+[GitHub page of this project is accessed using this link](git://github.com/JustineRobert/Teamwork.git)
 
 ### Author
 Justine Robert Igune
