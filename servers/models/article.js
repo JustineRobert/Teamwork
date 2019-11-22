@@ -1,9 +1,10 @@
 const moment = require('moment';)
 const Database = require('../database/database');
 
-class Article extends Database {
+class Article, Gif extends Database {
   constructor() {
     super('articles');
+    super('gifs');
   }
 
   async getById(id) {
@@ -19,4 +20,4 @@ class Article extends Database {
   }
 }
 
-module.exports = Article;
+module.exports = Article, Gif;
