@@ -75,7 +75,7 @@ Access link :[Visit the link]().
 
 # Github-page of this Project
 
-[GitHub Access link :](git://github.com/JustineRobert/Teamwork.git)
+[GitHub Access link :](https://github.com/JustineRobert/Teamwork)
 
 ### Author
 Justine Robert Igune
