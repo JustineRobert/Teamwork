@@ -1,4 +1,4 @@
-const Joi = require('@hapi/joi');
+import Joi from '@hapi/joi';
 
 const signupSchema = Joi.object()
   .keys({
@@ -47,4 +47,4 @@ const userSchemas = {
   '/auth/signup/': signupSchema,
 };
 
-module.exports = userSchemas;
+export default userSchemas;

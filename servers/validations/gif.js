@@ -1,27 +1,27 @@
 import Joi from '@hapi/joi';
 
-const article = {
+const gifs = {
   title: Joi.string()
     .trim()
     .required(),
   image: Joi.string().uri(),
-  article: Joi.string()
+  gif: Joi.string()
     .required(),
 };
 
-const paramsArticleId = {
-  articleId: Joi.number()
+const paramsGifId = {
+  gifId: Joi.number()
     .required()
     .greater(0)
     .integer(),
 };
 
 const storeSchema = Joi.object()
-  .keys(article);
+  .keys(gif);
 
 const paramSchema = Joi.object()
   .keys({
-    params: paramsArticleId,
+    params: paramsGifId,
   });
 const commentSchema = Joi.object()
   .keys({
@@ -29,13 +29,13 @@ const commentSchema = Joi.object()
       .trim()
       .required(),
   });
-const articleSchema = {
+const gifSchema = {
   patch: {
-    '/articles/:articleId/': storeSchema,
+    '/gifs/:gifId/': storeSchema,
   },
-  '/articles/': storeSchema,
-  '/articles/:articleId/': paramSchema,
-  '/articles/:articleId/comments/': commentSchema,
+  '/gifs/': storeSchema,
+  '/gifs/:gifsId/': paramSchema,
+  '/gifs/:gifsId/comments/': commentSchema,
 };
 
-export default articleSchema;
+export default gifSchema;

@@ -1,5 +1,5 @@
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 class Helpers {
   static hashPassword(password) {
@@ -48,4 +48,4 @@ class Helpers {
   }
 }
 
-module.exports = Helpers;
+export default Helpers;
