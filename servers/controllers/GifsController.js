@@ -1,7 +1,7 @@
 const moment = require('moment');
 const Helpers = require('../helpers/Helpers');
-const { Article, Category, Comment } = require('../models');
-const { articles } = require('../mock');
+const { Gif, Category, Comment } = require('../models');
+const { gifs } = require('../mock');
 
 const Model = new Gif();
 
@@ -19,13 +19,13 @@ class GifsController {
   }
 
   static async findAll(request, response) {
-    const _articles = await Model.all();
-    if (_articles.errors) Helpers.dbError(response, _gifs);
+    const _gifs = await Model.all();
+    if (_gifs.errors) Helpers.dbError(response, _gifs);
     return Helpers.sendResponse(response, 200, 'Success', _gifs.rows);
   }
 
   static async update(request, response) {
-    const { articleId } = request.params;
+    const { gifId } = request.params;
     const { user } = request;
     const data = {
       ...request.body,
@@ -33,7 +33,7 @@ class GifsController {
     };
     const update = await Model.update(data, {
       authorId: user.id,
-      id: articleId,
+      id: gifId,
     });
     if (update.errors) return Helpers.dbError(response, update);
     if (update.count > 0) {
@@ -43,11 +43,11 @@ class GifsController {
   }
 
   static async destroy(request, response) {
-    const { articleId } = request.params;
+    const { gifId } = request.params;
     const { user } = request;
     const destroy = await Model.delete({
       authorId: user.id,
-      id: articleId,
+      id: gifId,
     });
     if (destroy.errors) return Helpers.dbError(response, destroy);
     if (destroy.count > 0) {
@@ -57,8 +57,8 @@ class GifsController {
   }
 
   static async findOne(request, response) {
-    const { articleId } = request.params;
-    const result = await Model.getById(articleId);
+    const { gifId } = request.params;
+    const result = await Model.getById(gifId);
     if (result.errors) return Helpers.dbError(response, result);
     if (result.count > 0) {
       return Helpers.sendResponse(response, 200, 'Gif found!', result.row);
@@ -69,7 +69,7 @@ class GifsController {
   static async findByCategory(request, response) {
     const { tagId } = request.params;
     const categoryModel = new Category(tagId);
-    const results = await categoryModel.articles();
+    const results = await categoryModel.gifs();
     if (results.errors) return Helpers.dbError(response, results);
     if (results.count < 1) return Helpers.sendResponse(response, 404, 'No gifs found!');
     return Helpers.sendResponse(response, 200, 'Success', results.rows);
@@ -79,10 +79,10 @@ class GifsController {
     const commentModel = new Comment();
     const { user } = request;
     const { comment } = request.body;
-    const { articleId } = request.params;
+    const { gifId } = request.params;
     const data = {
       comment,
-      article_id: parseInt(articleId),
+      gif_id: parseInt(gifId),
       employee_id: user.id,
       createdOn: moment()
         .format('YYYY-MM-DD HH:mm:ss'),
@@ -103,4 +103,4 @@ class GifsController {
   }
 }
 
-module.exports = GifsController;
+export default GifsController;
