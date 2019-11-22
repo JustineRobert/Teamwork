@@ -73,13 +73,13 @@ Access link :[Visit the link]().
 # Swagger API Documentation
 Access link :[Visit the link]().
 
-# Github-page of this Project
+# Github page of this Project
 
-[GitHub Access link :](https://github.com/JustineRobert/Teamwork)
+[GitHub page for Teamwork App Access link ](https://github.com/JustineRobert/Teamwork)
 
 ### Author
 Justine Robert Igune
-[Justine Robert Igune Portpolio](https://github.com/JustineRobert/)
+[Justine Robert Igune](https://github.com/JustineRobert/)
 
 ### Version
 1.0.0
