@@ -56,9 +56,9 @@ describe('gifs endpoint tests', () => {
   });
   it('should create a gif', (done) => {
     const data = {
-      title: 'Eget duis at tellus at urna condimentum mattis pellentesque id',
-      //todo - Image should be gif
-      image: 'https://assets.imgix.net/hp/snowshoe.jpg?auto=compress&w=900&h=600&fit=crop'
+      title: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi.',
+      /*todo - Image should be gif */
+      image: 'https://www.wildlifeonline.me.uk/assets/ugc/images/hedgehog_catfood_plate_1.jpg'
     };
     chai.request(server)
       .post('/api/v2/gifs')
