@@ -3,7 +3,7 @@ const Database = require('../database/database');
 
 class Article, Gif extends Database {
   constructor() {
-    super('articles');
+    super('gifs');
   }
 
   async getById(id) {
@@ -19,4 +19,4 @@ class Article, Gif extends Database {
   }
 }
 
-module.exports = Article;
+module.exports = Gif;
