@@ -4,7 +4,6 @@
 [![dependencies Status](https://david-dm.org/Flexberry/javascript-project-template/status.svg)](https://david-dm.org/Flexberry/javascript-project-template)
 [![Maintainability](https://api.codeclimate.com/v1/badges/3e24f5c76db0e112494f/maintainability)](https://codeclimate.com/github/JustineRobert/Teamwork/maintainability)
 
-<<<<<<< HEAD
 ## Description:
 
 Teamwork is an internal social network for employees of an organization. The goal of this application is to facilitate more interaction between colleagues and promote team bonding.
@@ -20,13 +19,6 @@ Teamwork is an internal social network for employees of an organization. The goa
 # Dev Server (Nodemon)
 - `npm run dev`
 ```
-=======
-# Description:
-
-Teamwork is an internal social network for employees of an organization. The goal of this application is to facilitate more interaction between colleagues and promote team bonding.
-
-# Quick start with the App
->>>>>>> master
 
 # Install dependencies
 npm install
@@ -36,19 +28,11 @@ npm install
 - `npm install` to install all the dependencies in local environment.
 
 # Getting Started
-<<<<<<< HEAD
 To Start the application run the following npm script
 * `npm start` for starting the server.
 
 # Testing
 To test the application and view test coverage run:
-=======
-To Start application, run the following npm script
-* `npm start` for starting the server.
-
-# Testing
-To test the application and view test coverate run:
->>>>>>> master
 * `npm test` for running the tests, and getting coverage summary.
 
 # API
