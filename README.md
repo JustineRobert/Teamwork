@@ -74,25 +74,15 @@ Access link :[Visit the link]().
 Access link :[Visit the link]().
 
 # Github-page
-<<<<<<< HEAD
 GitHub page (gh-page) of this project accessed using this link [Teamwork](git://github.com/JustineRobert/Teamwork.git).
 
 ### Author
 Justine Robert Igune
 [Justine Robert Igune Portpolio](https://github.com/JustineRobert/)
-=======
-GitHub page (gh-page) of this project accessed using this link [Teamwork](git://github.com/JustineRobert/Teamwork.git).
-
-
-
-### Author
-
-Justine Robert Igune
-[Justine Robert Igune](https://github.com/JustineRobert)
->>>>>>> master
 
 ### Version
 1.0.0
+
 [Pre-release of the project URL:](https://github.com/JustineRobert/Teamwork/releases/tag/v1)
 
 
