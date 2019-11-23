@@ -55,7 +55,7 @@ To test the application and view test coverage run:
 Access link :[Visit the link]().
 
 # Swagger API Documentation
-Access link :[Visit the link]().
+Access link :[Visit the link](http://editor.swagger.io/)
 
 # Github page of this Project
 
