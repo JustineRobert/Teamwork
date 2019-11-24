@@ -52,10 +52,10 @@ To test the application and view test coverage run:
 
 ## App Info
 # Heroku 
-Access link :[Visit the link]().
+Access link :[https://teamworktitech.herokuapp.com/](https://teamworktitech.herokuapp.com/).
 
 # Swagger API Documentation
-Access link :[Visit the link](http://editor.swagger.io/)
+Access link :[http://editor.swagger.io/](http://editor.swagger.io/)
 
 # Github page of this Project
 
