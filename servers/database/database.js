@@ -1,6 +1,8 @@
 import { Pool } from 'pg';
 import dotenv from 'dotenv';
 
+const cloudinary = require('cloudinary').v2;
+
 dotenv.config();
 
 const {
