@@ -9,7 +9,7 @@ const path = require('path');
 
 dotenv.config();
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5500;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -26,9 +26,14 @@ app.use((request, response) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server started successfully on port ${PORT}`);
+server.listen(PORT, () => {
+  // eslint-disable-next-line
+  console.log(`Server is successfully running on port ${PORT}/`);
 });
 
+/*app.listen(PORT, () => {
+  console.log(`Server started successfully on port ${PORT}`);
+}); */
+
 export default app;
-/*export default router;*/
+/*export default server;*/
