@@ -57,18 +57,11 @@ Access link :[https://teamworktitech.herokuapp.com/](https://teamworktitech.hero
 # Swagger API Documentation
 Access link :[http://editor.swagger.io/](http://editor.swagger.io/)
 
-<<<<<<< HEAD
 # Github-page
 GitHub page (gh-page) of this project accessed using this link [Teamwork](https://JustineRobert.github.io/Teamwork/UI).
 
 
 # Github page of this Project
-=======
-# Github-page(gh-page)
-GitHub page (gh-page) of this project accessed using this link [Teamwork](https://justinerobert.github.io/Teamwork/UI/).
-
-# Github Repository page of this Project
->>>>>>> develop
 
 [GitHub page for Teamwork App Access link ](https://github.com/JustineRobert/Teamwork)
 
