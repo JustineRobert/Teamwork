@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon --exec babel-node ./api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "sinon": "^7.5.0",
     "sinon-chai": "^3.3.0",
     "sinon-express-mock": "^2.2.1",
+    "stable": "^0.1.8",
     "swagger-ui-express": "^4.0.7",
     "terser": "^4.4.0",
     "web-animations-js": "^2.3.2",
