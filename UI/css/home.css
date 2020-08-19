@@ -49,20 +49,20 @@ main section.services > div:first-child {
   background-color: #344955;
 }
 
-main section.services > div:nth-child(2) {
-  background-color: #232F34;
+main-section.services > div:nth-child(2) {
+  background-color: #232f34;
 }
 
-main section.services > div:last-child {
-  background-color: #4A6572;
+main-section.services > div:last-child {
+  background-color: #4a6572;
 }
 
-main section.services > div > i {
+main-section.services > div > i {
   font-size: 2.5vmax;
   margin-bottom: 1rem;
   font-weight: 300;
 }
-main section.services > div > b {
+main-section.services > div > b {
   font-weight: 600;
-  font-size: .9vmax;
+  font-size: .9em;
 }
