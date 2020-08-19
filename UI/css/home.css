@@ -15,7 +15,7 @@ header {
 }
 
 main section:first-child h1 {
-  color: #FFFFFF !important;
+  color: #FFFFFF;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
   font-weight: 800;
 }
@@ -32,7 +32,7 @@ main section h2 {
 }
 
 main section:first-child .button {
-  background-color: #FFFFFF !important;
+  background-color: #FFFFFF;
   color: #231557;
 }
 
