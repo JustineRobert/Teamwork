@@ -47,7 +47,7 @@
     "sinon-express-mock": "^2.2.1",
     "stable": "^0.1.8",
     "swagger-ui-express": "^4.0.7",
-    "terser": "^4.4.0",
+    "terser": "^4.8.1",
     "web-animations-js": "^2.3.2",
     "webpack": "^4.41.2"
   },
